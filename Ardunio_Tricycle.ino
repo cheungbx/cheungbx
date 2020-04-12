@@ -5,16 +5,16 @@
 
 //***********************定義馬達腳位*************************
 // Servo.h disables analogWrites for PWM Pin 9,10,11 as PWM pins, chose other pins for PWM for motor speed control.
-int MotorRspeed = 6;
-int MotorRight1 = 7;
-int MotorRight2 = 8;
-int MotorLeft1  = 9;
-int MotorLeft2  =10;
-int MotorLspeed = 5;
-int servoPin    =11;
-int counter=0;
-const int irReceiverPin = 3; //紅外線接收器 OUTPUT 訊號接在 pin 2
+int MotorRspeed   = 6;   // L298N motro drive pin ENA
+int MotorRight1   = 7;   // L298N motro drive pin IN1
+int MotorRight2   = 8;   // L298N motro drive pin IN2
+int MotorLeft1    = 9;   // L298N motro drive pin IN3
+int MotorLeft2    =10;   // L298N motro drive pin IN4
+int MotorLspeed   = 5;   // L298N motro drive pin ENB
+int servoPin      =11;   // Servo motor pin S
+int irReceiverPin = 3;   // IntraRed receiver LED 
 
+int counter=0;
 //***********************設定所偵測到的IRcode*************************
 long IRfront= 0x00FF18E7;       //前進碼 "2"
 long IRback=0x00FF4AB5;         //後退 "8"
